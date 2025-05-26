@@ -1,0 +1,94 @@
+@{
+    ViewData["Title"] = "BookMart - Your Online Bookstore";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Assuming you're using a shared layout
+}
+
+<!-- Hero Banner -->
+<section class="hero-banner py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-3 fw-bold mb-4">Welcome to BookMart</h1>
+                <p class="lead mb-4">Discover your next favorite book from our vast collection of titles. From timeless classics to contemporary bestsellers, we have something for every reader.</p>
+                <div class="d-flex gap-3">
+                    <a href="#featured-books" class="btn btn-primary btn-lg">Explore Books</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg">Join Now</a>
+                </div>
+                <div class="mt-4">
+                    <div class="d-flex align-items-center gap-4">
+                        <div>
+                            <h4 class="mb-0">10k+</h4>
+                            <small class="text-muted">Books Available</small>
+                        </div>
+                        <div>
+                            <h4 class="mb-0">5k+</h4>
+                            <small class="text-muted">Happy Readers</small>
+                        </div>
+                        <div>
+                            <h4 class="mb-0">500+</h4>
+                            <small class="text-muted">Authors</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Books Section -->
+<section id="featured-books" class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Featured Books</h2>
+            <a href="#" class="btn btn-link">View All</a>
+        </div>
+        <div class="row g-4">
+            <!-- Book Cards -->
+            <div class="col-6 col-md-3">
+                <partial name="_BookCard" model='new BookCardModel { Title = "1984", Author = "George Orwell", OriginalPrice = 399, DiscountedPrice = 299, ImagePath = "images/1984.jpg", Discount = "20%" }' />
+            </div>
+            <div class="col-6 col-md-3">
+                <partial name="_BookCard" model='new BookCardModel { Title = "The Alchemist", Author = "Paulo Coelho", OriginalPrice = 299, DiscountedPrice = 249, ImagePath = "images/the alchemist.jpg", Discount = "15%" }' />
+            </div>
+            <div class="col-6 col-md-3">
+                <partial name="_BookCard" model='new BookCardModel { Title = "Becoming", Author = "Michelle Obama", OriginalPrice = 499, DiscountedPrice = null, ImagePath = "images/becoming.jpg" }' />
+            </div>
+            <div class="col-6 col-md-3">
+                <partial name="_BookCard" model='new BookCardModel { Title = "The Diary", Author = "Anne Frank", OriginalPrice = 399, DiscountedPrice = null, ImagePath = "images/the diary.jpg" }' />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- New Arrivals -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>New Arrivals</h2>
+            <a href="#" class="btn btn-link">View All</a>
+        </div>
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <partial name="_BookCard" model='new BookCardModel { Title = "To Kill a Mockingbird", Author = "Harper Lee", OriginalPrice = 349, ImagePath = "images/to kill.jpg" }' />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Authors Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="mb-4">Popular Authors</h2>
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <partial name="_AuthorCard" model='new AuthorCardModel { Name = "Steve Jobs", Genre = "Biography", ImagePath = "images/steve.webp" }' />
+            </div>
+            <div class="col-6 col-md-3">
+                <partial name="_AuthorCard" model='new AuthorCardModel { Name = "George Orwell", Genre = "Fiction", ImagePath = "https://via.placeholder.com/100" }' />
+            </div>
+            <div class="col-6 col-md-3">
+                <partial name="_AuthorCard" model='new AuthorCardModel { Name = "Paulo Coelho", Genre = "Fiction", ImagePath = "https://via.placeholder.com/100" }' />
+            </div>
+        </div>
+    </div>
+</section>
