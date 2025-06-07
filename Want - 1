@@ -1,0 +1,38 @@
+Courses/Modules	Topics	Sub-Topics
+Agile Workshop	Introduction to Agile	Overview of Agile principles and values, Comparison with traditional waterfall methodology
+	Agile Manifesto	Understanding the four Agile values and twelve principles, Exploring how these values and principles guide Agile practices
+	Scrum Framework	Roles in Scrum (Product Owner, Scrum Master, Development Team), Scrum ceremonies (Sprint Planning, Daily Stand-up, Sprint Review, Sprint Retrospective), Scrum artifacts (Product Backlog, Sprint Backlog, Increment)
+	Agile Estimation and Planning	Techniques for Agile estimation (Story Points, Planning Poker), Agile planning techniques (Release Planning, Iteration Planning)
+	Agile User Stories	Writing effective user stories, Acceptance criteria for user stories
+	Agile Metrics and Reporting	Key Agile metrics (Velocity, Burndown Charts), Reporting progress in Agile projects
+Software Support and Maintenance	SDLC vs Agile,Software maintenance and support - overview	SDLC phases, Agile methodology,Need for Maintenance, Challenges in Software Maintenance, Categories of Software Maintenance, Software Reverse Engineering, Software support
+Unix Commands	Introduction	What is Unix?, Unix Architecture, Login Unix, Change Password, Listing Directories and Files, Who Are You?, Who is Logged In?, Logging Out, System Shutdown, Difference between Unix and Linux
+	File Management	Listing Files, Metacharacters, Creating Files, Editing Files, Display Content of a File, Counting Words in a File, Copying Files, Renaming Files, Deleting Files
+	Directory Management	Home Directory, Absolute/Relative Pathnames, Listing Directories, Creating Directories, Removing Directories, Changing Directories, Renaming Directories, The directories . (dot) and .. (dot dot)
+	File Permission / Access Modes	The Permission Indicators, File Access Modes, Directory Access Modes, Changing Permissions, Using chmod with Absolute Permissions, Changing Owners and Groups, SUID and SGID File Permission
+	Basic Utilities	Printing Files, The pr Command, The lp and lpr Commands, The lpstat and lpq Commands, The cancel and lprm Commands, Sending Email
+	Pipes and Filters	The grep Command, The sort Command, The pg and more Commands
+	Process Management	Starting a Process, Foreground Processes, Background Processes, Listing Running Processes, Stopping Processes, Parent and Child Processes, Daemon Processes, The top Command, Job ID Versus Process ID
+	Network Communication Utilities	The ping Utility, The ftp Utility, The telnet Utility, The finger Utility
+Shell Scripting Basics	Introduction to Shell Scripting	Overview of shell scripting and its importance in Unix/Linux environments, Comparison of different Unix shells (Bash, sh, csh, etc.)
+	Basic Shell Scripting Concepts	Variables: Declaring, assigning, and using variables in shell scripts, Input/Output: Handling user input and displaying output in shell scripts, Comments: Adding comments for documentation and readability
+	Control Structures	Conditional Statements: Using if-else and case statements for conditional execution, Loops: Implementing for, while, and until loops for repetitive tasks
+	Command-Line Arguments	Processing command-line arguments passed to shell scripts, Using special variables like $0, $1, $2, etc., to access command-line arguments
+	Functions	Creating and using functions in shell scripts for modularization, Passing arguments to functions and returning values
+	Text Processing	Searching and replacing text using tools like grep, sed, and awk, Manipulating strings - Extracting substrings, concatenating strings, etc.
+	Error Handling and Debugging	Handling errors and exceptions in shell scripts, Debugging techniques: Using echo statements, debugging flags, etc.
+Git	Introduction	What is Version Control?, What is Distributed Version Control Systems (DVCs)?, What is Git?, Git Workflow, Installing Git on Windows, Confuguring Git 
+	Working Locally with Git	Creating a local repository, adding files, and committing changes,  Viewing history and diffs, Staging changes as multiple commits, Deleting and renaming files, Undoing changes to the working copy, Undoing/redoing changes in the repository, Cleaning the working copy,  Ignoring files with .gitignore
+	Working Remotely with Git	Cloning a Remote Repository, Basic Repository Statistics, Viewing Commits, Git Protocols, Viewing Branches and Tags,  Fetching from a Remote, Pulling from a Remote, Pushing to a Remote, Creating and Verifying Tags, Pushing Tags to a Remote
+	Branching, Merging, and Rebasing with Git	Creating local branches, Difference between branches and tags, Renaming and deleting branches,  Recovering deleted commits,  Stashing changes,  Merging branches,  Rebasing changes, Creating a remote branch, Deleting a remote branch
+Bootstrap 5	Introduction to Bootstrap 5	Overview of Bootstrap Framework, Setting up Bootstrap 5 via CDN and NPM, Bootstrap Grid System Basics
+	Layout and Grid System	"Containers and Responsive Breakpoints, Rows, Columns, and Nesting Grids, 
+Flexbox Utilities in Bootstrap"
+	Essential Components	Buttons and Button Groups, Forms and Form Validation, Navigation Bar (Navbar), Dropdowns, Modals, and Alerts
+	Utilities and Helpers	Spacing (Margin and Padding), Typography Utilities (Text Alignment, Colors), Display Utilities (Show, Hide, and Responsive Classes), Background and Border Utilities
+	Responsive Design	Media Queries and Responsive Breakpoints, Handling Images (Responsive Images, Thumbnails), Building Responsive Navigation
+	Customization and Extensions	Theming with Bootstrap Variables, Using Bootstrap Icons, Introduction to SASS in Bootstrap
+jQuery	jQuery and its features	JavaScript framework, DOM manipulation, event handling, AJAX, how to use - download js/CDN, basic usage thru $, $(document)
+	Basic components	Selectors - TagId, Tagname, tag class; attributes - text, attr, val, html, addClass, chaining of attributes
+	DOM manipulation & events	content manipulation, DOM element addition and removal, append, clone, Events - click, change, blur, dblclick, load, keyup, mouseover, unload
+	Basic AJAX with jQuery	What is AJAX?, jQuery AJAX Methods, jQuery - AJAX load() Method, jQuery - AJAX get() and post() Methods
