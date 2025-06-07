@@ -1,0 +1,82 @@
+Courses/Modules	Topics	Sub-Topics
+Design Patterns and Principles, UML Basics	Different Types of Software Design Principles	SOILD, DRY (Don’t Repeat Yourself)
+	Introduction to UML	What is UML?, Purpose and Benefits of UML, UML Diagram Types
+	UML Diagram Types	"Structural Diagrams- Class Diagram, Object Diagram, Component Diagram, Deployment Diagram, Package Diagram;
+Behavioral Diagrams-Use Case Diagram, Sequence Diagram, Collaboration Diagram, Statechart Diagram, Activity Diagram;
+Interaction Diagrams-Communication Diagram, Timing Diagram;"
+	UML Diagram Elements	UML Symbols and Notations, Classes, Objects, and Interfaces, Relationships (Association, Aggregation, Composition, Inheritance), Multiplicity and Navigation, Attributes and Methods, Packages and Subsystems, Stereotypes and Profiles
+Entity Framework Core 8.0	Overview of EF Core 8 and .NET 8 Integration	What is ORM (Object-Relational Mapping)?, EF Core vs EF Framework: Key Differences, New Features in EF Core 8
+	Setting up EF Core in a .NET 8 Project	Installing EF Core Packages via NuGet, Configuring DbContext, Connecting to SQL Server, Basic EF Core CLI Commands (Add Migration, Update Database)
+	Creating a Simple Database Model	"Defining Entities and Relationships
+Primary Keys, Foreign Keys, and Navigation Properties, Code-First Approach Overview"
+	Performing Basic CRUD Operations	Inserting Records into the Database (AddAsync), Retrieving Data with Find, FirstOrDefault, and ToListAsync, Updating Records and Tracking Changes, Deleting Records (Remove vs DeleteRange)
+	LINQ Queries in EF Core 8	Writing Queries Using Where, Select, and OrderBy, Projection into DTOs (Data Transfer Objects), Filtering and Aggregating Data, Asynchronous Queries with ToListAsync()
+	EF Core Migrations and Database Updates	Adding, Removing, and Updating Migrations, Seeding Data during Migrations, Managing Database Schema Changes
+	Handling Relationships and Data Loading	Eager, Lazy, and Explicit Loading Explained, Configuring One-to-One, One-to-Many, and Many-to-Many Relationships, Navigating Circular References
+	Performance Optimizations and Best Practices	Query Caching and Tracking Behavior (AsNoTracking), Batch Processing and Bulk Operations, Handling Concurrency with RowVersion Columns, Using Compiled Queries for Performance Boost
+ASP.NET Core 8.0	Introduction to ASP.NET Core 8	Overview of ASP.NET Core 8 and .NET 8, ASP.NET Core vs .NET Framework, Installing SDKs and Setting up Visual Studio / VS Code
+	Creating a New ASP.NET Core Project	Introduction to Project Templates (MVC vs API vs Minimal APIs), Setting Up a Basic MVC Project, Project Structure Overview (Controllers, Views, Models, wwwroot)
+	Understanding MVC Architecture	Role of Models, Views, and Controllers, Lifecycle of a Request in an MVC Application
+	Working with Models	Creating Models with C# Classes, Strongly-Typed Views and ViewModel Patterns, Data Annotations and Validation
+	Building Controllers	Creating and Registering Controllers, Handling Requests with Action Methods, Using Parameters in Controller Actions
+	Designing Views in ASP.NET Core	Razor View Engine and Razor Syntax, Layout Views and Partial Views, Adding CSS and JavaScript Files
+	Routing in ASP.NET Core	Convention-based Routing vs Attribute Routing, Route Constraints and Custom Routes, Generating URLs using Tag Helpers
+	Working with Forms and User Input	"Designing Forms with Razor Pages, Handling Form Submission in Controllers, 
+Model Binding and Model Validation"
+	State Management	Managing State with Session and Cookies, TempData and ViewData for Short-term Data Storage, Managing Authentication State
+	Integrating EF Core 8 with ASP.NET Core	Configuring Database Connections, Performing CRUD Operations with EF Core, Using Migrations to Manage Database Schema
+	Dependency Injection (DI) in ASP.NET Core	Understanding the DI Container, Registering Services in the DI Container, Injecting Services into Controllers
+	Publishing and Deployment	Configuring the AppSettings File for Production, Publishing the Application (IIS, Azure, or Docker), Managing Environment-Specific Configurations
+Building RESTful APIs with ASP.NET Core	Introduction to Web APIs and ASP.NET Core	Overview of Web APIs, REST vs. SOAP, Setting up .NET 8 Development Environment, ASP.NET Core Web API project structure
+	Building RESTful APIs with ASP.NET Core	Creating controllers, actions, and routes, CRUD operations with Entity Framework Core, JSON formatting and serialization
+	Advanced API Features	Attribute routing and query parameters, Middleware and custom filters, Implementing JWT-based authentication and authorization
+	Consuming and Creating SOAP Services	Introduction to SOAP APIs and WCF, Consuming SOAP services in ASP.NET Core, Creating SOAP services using WCF
+	API Security and Exception Handling	Global exception handling and error responses, Logging with Serilog, Securing APIs with API keys and Oauth
+	API Documentation and Testing	Integrating Swagger/OpenAPI for API documentation, Using Postman for manual API testing, Automating API testing with REST Client
+Microservices Basics	Introduction to Microservices	What&Why?, Principles of Microservices, Microservices Benefits, Anti-Patterns
+	Building Blocks	Microservices Architecture, Microservices as RESTful APIs, Client-to-Microservice Communication Through an API Gateway, Event-Driven Communication Using an Event Bus, Securing Microservices
+	Data Management	Data Management Patterns, CQRS & Event Sourcing, Saga Pattern
+	Deployment and Infrastructure	Containerization of Microservices, Tools and Technologies
+Application Debugging using Visual Studio Debugger	Introduction to Debugging	What is Debugging and Why is it important?, Why do we need Debugging?, Steps involved in Debugging, Debugging Strategies, Debugging Tools, Debugger vs. debugging, Debug mode vs. running your app, When to use a debugger
+	Visual Studio Debugger	Set a breakpoint and start the debugger, Navigate code in the debugger using step commands, Step over code to skip functions, Run to a point in your code quickly using the mouse, Advance the debugger out of the current function, Run to cursor, Edit your code and continue debugging, Inspect variables with data tips, Inspect variables with the Autos and Locals windows, Set a watch, Examine the call stack, Inspect an exception, Configure debugging
+	Navigate through code by using the Visual Studio debugger	Enter break mode, Code stepping-Step into code, Step through code and skip some functions,  Run to a specific location or function - Run to a breakpoint in code, Run to a function breakpoint, Run to Click, Move the pointer to change the execution flow
+NUnit	Getting Started	What is Automated Testing, Benifits of Automated Testing, Types of Tests, Test Pyramid, Popular Testing Frameworks, Using NUnit in Visual Studio, What is Test-Driven Development
+	Fundamentals of Unit Testing	Characteristics of Good Unit Tests, What to Test and What Not to Test, Naming and Organizing Tests, Black-box Testing, Set Up and Tear Down, Parameterized Tests, Ignoring Tests, Writing Trustworthy Tests
+	Core Unit Testing Techniques	Testing Strings, Testing Arrays and Collections, Testing Return Type of Methods, Testing Void Methods, Testing Methods that Throw Exceptions, Testing Private Methods, Code Coverage
+Moq	Breaking External Dependencies	Loosely-coupled and Testable Code, Refactoring Towards a Loosely-coupled Design, Dependency Injection via Method Parameters, Dependency Injection via Properties, Dependency Injection via Constructor, Dependency Injection Frameworks, Mocking Frameworks, Creating Mock Objects Using Moq, State-based vs. Interaction Testing, Testing the Interaction Between Two Objects
+ITIL	Getting Started	What is ITIL?, Why is ITIL important?, What is ITIL 4?, ITIL service lifecycle, Purpose of ITIL Service Operation, Scope of ITIL Service Operation, Business Value of ITIL Service Operation,Optimization of ITIL Service Operation - Long-Term Incremental Improvement, Short-Term Ongoing Improvement
+	Functions of ITIL Service Operation	Service Desk, Technical Management,  IT Operation Management, Application Management
+	Processes Under Service Operation	Event Management, Incident Management, Problem Management, Request Fulfilment, Access Management
+Jira	Basic Concepts	What is JIRA?, Basics of Agile Methodology, Key Agile Terms in JIRA, JIRA Terminology, JIRA's Interface
+	Using Team-Managed Projects	Team-Managed Projects vs Company-Managed Projects, Creating a Team-Managed Project, Navigating Team-Managed Projects,  Creating Issues in Team-Managed Projects, Customizing Team-Managed Projects, 
+	Using Company-Managed Projects	Creating a Company-Managed Project, Navigating Company-Managed Projects, Creating a New Scrum Board, Scrum Agile Board Overview, Customizing Scrum Boards, Creating a New Kanban Board, Kanban Agile Board Overview, Customizing Kanban Boards, Creating Issues, Creating Filters, Using Dashboards, Sharing Filters, Reports in Jira, Roadmaps in Jira, Bulk Creating Issues, Bulk Editing Issues
+	Administration Basics	User Management in Jira, Company-Managed Project Administration Overview, Understanding Workflows, Understanding How Schemes Work, Creating a New Issue Type, Creating Custom Fields, Basics of Automation in Jira, Jira System Administration Overview
+ServiceNow	Introduction to ServiceNow	What is ServiceNow?, Services of ServiceNow-IT Service management, HR management, IT Asset management, Finance operation management, ServiceNow Instance, Generating Developer Instance, ServiceNow User Interface (UI), 
+	ServiceNow Fundamentals	Applications and Modules, Lists and Forms, Users, Roles and Groups, Tables, Columns and Fields
+	Core Applications	Incident Management & SLAs, Problem Management, Change Management, Configuration Management, Service Catalog, Knowledge Management, Service Portal, Connect & Visual Task Boards
+Azure Boards	Introduction to Azure DevOps Boards	What is Azure DevOps Boards?, Key features and benefits, Accessing Azure DevOps Boards
+	Work Item Types 	Understanding work items, Types of work items, Creating work items
+	Boards 	Navigating the boards, Customizing the board, Using swimlanes
+	Backlogs 	Creating and managing backlogs, Prioritizing work items, Sprints and iterations
+	Task Management	Assigning work items to team members, Tracking progress, Using the Kanban board
+	Agile Planning	Agile methodologies in Azure DevOps Boards, Estimation and story points, Capacity planning
+	Queries 	Creating and running queries, Query language and filters, Saving and sharing queries
+	Reporting 	Generating reports and dashboards, Customizing reports
+Windows Service	Introduction	What is a Windows Service?, Why we need a Windows Service?, What is the Windows Services Control Manager?, Differences between Windows Services and Regular Applications, Examples of Windows Services
+	Developing and Managing a Windows Service	Installing the Windows Service, How to start the Windows Service, Stop the Windows Service
+Python 3	Basics	Python Introduction, Python Version History, Python 3 Features, Python Environment Variables, Running Python Code with Commmand Line, .py Files
+	Variables and Types	Python Variables, Python Numbers, Python Strings, String Methods, Python Casting Data Types
+	Python Operators	Types of Operator, Mathematical Operators, Assignment Operators, Comparison Operators, Logical Operators, Membership Operators, Identity Operators, Bitwise Operators, Operators Precedence
+	Program Flow	If Condition Python Statements, Elif Keyword, If... Else Conditions, AND Condition in an If Statement, OR Condition in an If Statement, While Loops, break Keyword, continue Keyword, For Loops, Looping through String Values, Range Function in For Loops, For Loop Else Statement
+	Functions	What are Functions?, Defining a Function, Calling a Function, Pass by Reference vs Value, Function Arguments, Required Arguments, Keyword Arguments, Default Arguments, Variable-length Arguments, The Anonymous Functions, The return Statement, Global vs. Local variables
+	Collections - Lists	Python List Data Type, List Append Method, Accessing Values in Lists, Updating Lists, Delete List Elements, Basic List Operations, Indexing, Slicing and Matrixes, Built-in List Functions and Methods   
+	Collections - Tuples	What are Tuples?, Accessing Values in Tuples, Updating Tuples, Delete Tuple Elements, Basic Tuples Operations, Indexing, Slicing, and Matrixes, Built-in Tuple Functions
+	Collections - Dictionary	What is Dictionary?, Accessing Values in Dictionary, Updating Dictionary, Delete Dictionary Elements, Properties of Dictionary Keys, Built-in Dictionary Functions and Methods 
+	Object Oriented Programming (OOP)	What is OOP?, Why OOP?, Characteristics of OOP, Creating Python Classes, Python Class Properties,  Class __init__ function, Class self Argument, Python Class Functions, Class Function return, Python Private Properties, Python Class Private Functions, Delete an Object, Introduction to Object Inheritance, Python Class Inheritance, Class Inheritance Function Override
+	File I/O	Printing to the Screen, Reading Keyboard Input, The file Object Attributes, Opening Text Files with Python,  Reading Text Files with Python, Using a Loop to Read all Content in a Text File, Writing to a Text File with Python, Creating a Text File, Renaming and Deleting Files, Directories in Python, File and Directory Related Methods
+	Exception Handling	What is Exception?, Exception Handling Features in Python, Standard Exceptions, Assertions in Python, The assert Statement, Handling an exception, The except Clause with No Exceptions,  The except Clause with Multiple Exceptions, The try-finally Clause, Argument of an Exception, Raising an Exception, User-Defined Exceptions
+	Modules	What are Modules in Python?, The import Statement, The from...import Statement, The from...import * Statement, Executing Modules as Scripts, Locating Modules, The PYTHONPATH Variable, Namespaces and Scoping, The dir( ) Function, The globals() and locals() Functions, The reload() Function, Packages in Python
+Cloud basics	Introduction to Cloud Computing	What is Cloud Computing?, Why Cloud Computing?, Characteristics of Cloud Computing, Cloud Computing Architecture, Components of Cloud Computing Architecture, Difference between Cloud Computing and Grid Computing, How does cloud computing work, Cloud Computing Applications, What are the Security Risks of Cloud Computing
+	Types of Cloud	Public Cloud, Advantages of Public Cloud, Disadvantages of Public Cloud, Private Cloud, Advantages of Private Cloud, Disadvantages of Private Cloud, Hybrid Cloud, Advantages of Hybrid Cloud, Disadvantages of Hybrid Cloud, Community Cloud, Advantages of Community Cloud, Disadvantages of Community Cloud
+	Cloud Service Models	IaaS, PaaS, SaaS
+	Cloud Service Providers	AWS, Azure, GCP
