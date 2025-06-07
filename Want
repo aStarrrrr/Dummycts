@@ -1,0 +1,80 @@
+Stages	Courses/Modules	Key Performance Outcomes
+Stage 1 - Delta	Agile Methodology	"• Should be able to understand Agile principles, values, and the key differences from the Waterfall methodology.
+• Should be able to understand the roles, ceremonies, and artifacts within the Scrum framework.
+• Should be able to participate effectively in Scrum ceremonies and utilize Scrum artifacts in project scenarios.
+• Should be able to write clear and effective user stories with well-defined acceptance criteria."
+	Software Engineering Basics	• Should be able to apply the software engineering lifecycle by demonstrating competence in communication, planning, analysis, design, construction, and deployment.
+	Unix Commands & Shell Scripting Basics	"•Should be able to identify and use UNIX/Linux utilities to create and manage simple file processing operations
+•Should be able to use commands that organize directory structures with appropriate security
+• Should be able to explain the importance of filters and their need in UNIX
+• Should be able to demonstrate the use of various grep and sed commands
+• Should be able to use various process commands to create and manage processes in UNIX
+• Should be able to use various networking commands to configure and troubleshoot in UNIX
+• Should be able to create simple shell scripts with knowledge of syntax and basic commands.
+• Should be able to define and utilize variables for storing and manipulating data within scripts.
+• Should be able to define and use functions to encapsulate and reuse code within scripts.
+• Should be able to handle errors and exceptions through exit codes and simple error messages."
+	Distributed Version Control System	"• Should be able to understand common Git workflows.
+• Should be able to create a new Git project and configure it.
+• Should be able to make and track changes to code by using Git.
+• Should be able to explain and demonstrate basic Git operations like git add, git clone, git checkout, git push, git pull.
+• Should be able to perform Branching, Merging and Rebasing."
+	Bootstrap 5 and jQuery	"• Should be able to make responsive, cross-platform and modern websites using Bootstrap 5.
+• Should be able to Illustrate animated, interactive web pages using jQuery libraries."
+Stage 2	Design Patterns and Principles, UML Basics	"• Should be able to use SOLID principles in Object-oriented software development
+• Should be able to understand the concept of pattern-based analysis and design
+• Should be able to refactor existing designs to use design patterns
+• Should be able to identify various types of UML diagrams, including structural, behavioral, and interaction diagrams.
+• Should be able to understand how to create and analyze use case diagrams for capturing system requirements and interactions."
+	Entity Framework Core 8.0	"• Should be able to explain Object-Relational Mapping (ORM) and differentiate between EF Core and EF Framework.
+• Should be able to install EF Core packages and configure DbContext to connect with SQL Server.
+• Should be able to use EF Core CLI commands to create and update database schemas with migrations.
+• Should be able to create entities with primary and foreign keys and configure relationships like One-to-Many and Many-to-Many.
+• Should be able to perform insert, update, retrieve, and delete operations using EF Core methods.
+• Should be able to use LINQ to write queries with filtering, ordering, and projecting data into DTOs.
+• Should be able to implement eager, lazy, and explicit loading to manage entity relationships.
+• Should be able to use query caching, AsNoTracking, and compiled queries for better performance.
+• Should be able to handle concurrency issues using RowVersion columns to avoid data conflicts.
+• Should be able to seed data during migrations and manage schema changes effectively through migrations."
+	ASP.NET Core 8.0	"• Should be able to explain the differences between ASP.NET Core 8 and .NET Framework and set up the development environment.
+• Should be able to build a basic MVC project using templates and understand the roles of controllers, views, and models.
+• Should be able to explain the lifecycle of a request in an MVC application from routing to response generation.
+• Should be able to create models with data annotations, develop strongly-typed views, and register controllers to handle requests.
+• Should be able to design reusable views using Razor syntax, layout views, and partial views with CSS and JavaScript.
+• Should be able to use convention-based and attribute routing to manage routes and generate URLs with tag helpers.
+• Should be able to create forms with Razor Pages, handle form submissions in controllers, and validate input using model binding.
+• Should be able to use sessions, cookies, TempData, and ViewData to manage state and implement authentication handling.
+• Should be able to connect to databases, perform CRUD operations, and manage schema changes using migrations.
+• Should be able to register services in the DI container, inject them into controllers, and configure the app for different environments.
+• Should be able to configure app settings and publish the application to IIS, Azure, or Docker with environment-specific settings."
+	Building RESTful APIs with ASP.NET Core (.NET 8)	"• Should be able to set up a .NET 8 development environment and create a structured ASP.NET Core Web API project from scratch.
+• Should be able to build RESTful API endpoints with controllers, actions, and routes, and perform CRUD operations using Entity Framework Core.
+• Should be able to configure attribute routing, develop middleware, and implement JWT-based authentication and authorization for secure access.
+• Should be able to create SOAP services using WCF and consume external SOAP services within ASP.NET Core applications.
+• Should be able to implement global exception handling and structured logging using Serilog, while securing APIs with API keys and OAuth.
+• Should be able to integrate Swagger for API documentation, perform manual testing using Postman, and automate testing with REST Client tools."
+	Microservices Basics	• Should be able to explain the fundamental concepts of microservices architecture, including the decoupling of services, individual scalability, API-based communication, and the benefits of microservices in software development.
+	Application Debugging using Visual Studio Debugger	"• Should be able to explain what is Debugging and why do we need it
+• Should be able to use Visual Studio Debugger that helps in navigating through code to inspect the state of an app and show its execution flow.
+• Should be able to employ various debugging techniques during application development and maintenance."
+	Unit Testing	"• Should be able to implement unit testing using NUnit Framework
+• Should be able to write loosely-coupled and testable code
+• Should be able to understand and implement dependency injection
+• Should be able to use mocks to isolate code from external dependencies"
+	ITIL	"• Should be able to use the ITIL terminology
+• Should be able to understand the ITIL processes
+• Should be able to explain various functions of ITIL Service Operation
+• Should be able to explain various processes under Service Operation
+• Should be able to develop procedures for Incident resolving"
+	Jira, Service Now, Azure Boards	"• Should be able to explain how to track and handle issues, set up boards and report on them with JIRA
+• Should be able to effectively identify and organize configuration items to be controlled with SCM, including labeling and version control.
+• Should be able to effectively manage and prioritize work items in Azure Boards, ensuring that tasks and user stories are organized, assigned, and tracked throughout the project lifecycle"
+	Windows Service	"• Should be able to explain what is a Windows Service, why we need it and what are the differences between Windows Services and Regular Applications
+• Should be able to develop and manage a Windows Service"
+	Python 3	"• Should be able to design and program Python 3 applications.
+• Should be able to demonstrate the Object Orientated Programming Concepts using Python 3.
+• Should be able to use exception handling in Python applications for error handling.
+• Should be able to develop Python Modules to Create Re-Usable Code."
+	Cloud Computing Basics	"• Should be able to explain what is Cloud computing and its characteristics
+• Should be able to explain types of Cloud
+• Should be able to explain various Cloud Service Models and Cloud Service Providers"
