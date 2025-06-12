@@ -1,0 +1,29 @@
+total_rent = 0
+while True:
+    house_type = int(input('Enter the type of house (1 BHK / 2 BHK / 3 BHK) or 0 to quit: '))
+    if house_type == 0:
+        break
+    if house_type == 1:
+        base_rent = 1000
+    elif house_type == 2:
+        base_rent = 1500
+    elif house_type == 3:
+        base_rent = 2000
+    else:
+        print('Invalid house type. Please enter 1, 2, 3 or 0 to quit.')
+        continue
+    parking = int(input("Parking required? (1/0): "))
+    cleaning = int(input("Special cleaning services required? (1/0): "))
+    if parking == 1 and cleaning == 1:
+        extra = 150
+    elif parking == 1:
+        extra = 100
+    elif cleaning == 1:
+        extra = 50
+    else:
+        extra = 0
+    rent = base_rent + extra
+    print(f"Rent after including additional charges: {rent}")
+    total_rent += rent
+print(f"Total rent: {total_rent}")
+print("Thank you for using our application!")
