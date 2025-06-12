@@ -1,0 +1,65 @@
+class Addition:
+    def __init__(self):
+        self.__real = 0
+        self.__img = 0
+
+    def get_real(self):
+        return self.__real
+
+    def set_real(self, real):
+        self.__real = real
+
+    def get_img(self):
+        return self.__img
+
+    def set_img(self, img):
+        self.__img = img
+
+    def addRealPart(self, obj1, obj2):
+        return obj1.get_real() + obj2.get_real()
+
+    def addImaginaryPart(self, obj1, obj2):
+        return obj1.get_img() + obj2.get_img()
+
+    def __add__(self, oth_obj):
+        result_obj = Addition()
+        result_obj.set_real(self.get_real() + oth_obj.get_real())
+        result_obj.set_img(self.get_img() + oth_obj.get_img())
+        return result_obj
+
+    def __str__(self):
+        return f"{self.__real} + {self.__img}i"
+
+
+def main():
+    print("Enter the real and imaginary parts of the first complex number:")
+    real1 = int(input())
+    img1 = int(input())
+
+    print("Enter the real and imaginary parts of the second complex number:")
+    real2 = int(input())
+    img2 = int(input())
+
+    obj1 = Addition()
+    obj2 = Addition()
+
+    obj1.set_real(real1)
+    obj1.set_img(img1)
+
+    obj2.set_real(real2)
+    obj2.set_img(img2)
+
+    sum_real_part = obj1.addRealPart(obj1, obj2)
+    sum_imaginary_part = obj1.addImaginaryPart(obj1, obj2)
+
+    print(f"Real part addition: {sum_real_part}")
+    print(f"Imaginary part addition: {sum_imaginary_part}")
+
+    
+    result_complex_number = obj1 + obj2
+
+    print(f"Complex Number: {result_complex_number}")
+
+
+if __name__ == "__main__":
+    main()
