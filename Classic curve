@@ -1,0 +1,43 @@
+class Member:
+    def __init__(self, customerId, customerName, emailId):
+        self.customerId = customerId
+        self.customerName = customerName
+        self.emailId = emailId
+
+class GoldMember(Member):
+    def __init__(self, customerId, customerName, emailId):
+        super().__init__(customerId, customerName, emailId)
+        self.discountAmount = None
+
+    def calculateDiscount(self, purchaseAmount):
+        self.discountAmount = purchaseAmount * 0.90
+
+class DiamondMember(Member):
+    def __init__(self, customerId, customerName, emailId):
+        super().__init__(customerId, customerName, emailId)
+        self.discountAmount = None
+
+    def calculateBalance(self, purchaseAmount):
+        self.discountAmount = purchaseAmount * 0.80
+print("1.GoldMembership")
+print("2.DiamondMembership")
+choice = input("Enter the choice\n")
+
+print("Enter the Details:")
+customerId = input("Customer Id\n")
+customerName = input("Customer Name\n")
+emailId = input("EmailId\n")
+purchaseAmount = float(input("Enter the Purchase Amount\n"))
+
+print("Member Details")
+
+if choice == '1':
+    g_account_obj = GoldMember(customerId, customerName, emailId)
+    g_account_obj.calculateDiscount(purchaseAmount)
+    print(f"{g_account_obj.customerId} {g_account_obj.customerName} {g_account_obj.emailId} {g_account_obj.discountAmount}")
+elif choice == '2':
+    d_account_obj = DiamondMember(customerId, customerName, emailId)
+    d_account_obj.calculateBalance(purchaseAmount)
+    print(f"{d_account_obj.customerId} {d_account_obj.customerName} {d_account_obj.emailId} {d_account_obj.discountAmount}")
+else:
+    print("Invalid choice")
