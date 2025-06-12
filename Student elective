@@ -1,0 +1,44 @@
+def main():
+    try:
+        num_students = int(input("Enter the no. of students: "))
+    except ValueError:
+        print("Invalid input")
+        return
+    if num_students <= 0:
+        print("Invalid input")
+        return
+
+    student_electives_list = []
+    for _ in range(num_students):
+        electives_str = input("Enter electives: ")
+        electives = [e.strip() for e in electives_str.split('/')]
+        student_electives_list.append(electives)
+
+    print("Student electives list:", student_electives_list)
+
+    electives_count = {}
+    for student_electives in student_electives_list:
+        for elective in student_electives:
+            electives_count[elective] = electives_count.get(elective, 0) + 1
+    print("Electives count:", electives_count)
+
+   
+    common_electives = []
+    if student_electives_list:
+        first_student_electives_set = set(student_electives_list[0])
+        
+        for i in range(1, num_students):
+            first_student_electives_set = first_student_electives_set.intersection(set(student_electives_list[i]))
+        
+        common_electives = sorted(list(first_student_electives_set))
+
+    if common_electives:
+        print("Common elective:", common_electives)
+    else:
+        print("No common electives found")
+
+    return
+
+
+if __name__ == '__main__':
+    main()
