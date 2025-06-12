@@ -1,0 +1,20 @@
+price = int(input('Enter amount:'))
+if price <= 0:
+    print('Invalid input')
+    exit()
+choice = int(input('Enter denomination choice:'))
+if choice == 1:
+    denomination = 100
+elif choice == 2:
+    denomination = 200
+elif choice == 3:
+    denomination = 500
+else:
+    print('Invalid input')
+    exit()
+if price < denomination:
+    print(f"Balance amount of Rs.{price} has been returned.")
+    exit()
+num_of_notes = price // denomination
+balance = price % denomination
+print(f"{num_of_notes}*Rs.{denomination} notes have been released in exchange for Rs.{price}. Balance amount of Rs.{balance} has been returned.")
