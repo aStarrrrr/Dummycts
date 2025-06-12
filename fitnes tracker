@@ -1,0 +1,70 @@
+def analyze_steps_data():
+    while True:
+        try:
+            num_days_str = input("Enter the number of days: ").strip()
+            num_days = int(num_days_str)
+            if num_days <= 0:
+                print("Invalid input: No data entered.")
+                return
+            else:
+                break
+        except ValueError:
+            print("Invalid input. Please enter a valid number for days.")
+
+    daily_steps = []
+    for i in range(1, num_days + 1):
+        while True:
+            try:
+                steps_str = input(f"Enter the number of steps for Day {i}: ").strip()
+                steps = int(steps_str)
+                if steps >= 0:
+                    daily_steps.append(steps)
+                    break
+                else:
+                    print("Invalid input. Please enter a non-negative number for steps.")
+            except ValueError:
+                print("Invalid input. Please enter a valid number for steps.")
+
+    print("\nAnalysis Results:")
+
+    total_steps = sum(daily_steps)
+    average_steps = total_steps / num_days
+    print(f"Average steps per day: {average_steps:.2f}")
+
+    max_steps = -1
+    min_steps = float('inf')
+    max_day = -1
+    min_day = -1
+
+    for i in range(num_days):
+        if daily_steps[i] > max_steps:
+            max_steps = daily_steps[i]
+            max_day = i + 1
+        if daily_steps[i] < min_steps:
+            min_steps = daily_steps[i]
+            min_day = i + 1
+
+    print(f"Day with the most steps: Day {max_day} ({max_steps} steps)")
+    print(f"Day with the least steps: Day {min_day} ({min_steps} steps)")
+
+    increasing_streak = "Yes"
+    if num_days > 1:
+        for i in range(num_days - 1):
+            if daily_steps[i+1] <= daily_steps[i]:
+                increasing_streak = "No"
+                break
+    else:
+        increasing_streak = "No"
+    print(f"Consecutive increasing steps streak: {increasing_streak}")
+
+    decreasing_streak = "Yes"
+    if num_days > 1:
+        for i in range(num_days - 1):
+            if daily_steps[i+1] >= daily_steps[i]:
+                decreasing_streak = "No"
+                break
+    else:
+        decreasing_streak = "No"
+    print(f"Consecutive decreasing steps streak: {decreasing_streak}")
+
+analyze_steps_data()
