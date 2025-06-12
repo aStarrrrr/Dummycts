@@ -1,0 +1,73 @@
+def manage_employee_data():
+    file_name = 'employee.txt'
+    updated_employee_data = []
+
+    try:
+        with open(file_name, 'r') as file:
+            for line in file:
+                parts = line.strip().split(',')
+                if len(parts) == 3:
+                    emp_id = parts[0]
+                    emp_name = parts[1]
+                    current_salary = float(parts[2])
+
+                    new_salary = current_salary * 1.10
+                    new_salary_formatted = f"{new_salary:.2f}"
+
+                    updated_employee_data.append(f"{emp_id},{emp_name},{new_salary_formatted}")
+    except FileNotFoundError:
+        print(f"Error: The file '{file_name}' was not found. Please create it with employee data.")
+        return
+    except Exception as e:
+        print(f"An error occurred while reading the file: {e}")
+        return
+
+    try:
+        with open(file_name, 'w') as file:
+            for employee_record in updated_employee_data:
+                file.write(employee_record + '\n')
+    except Exception as e:
+        print(f"An error occurred while writing to the file: {e}")
+        return
+
+    print("The updated details are:")
+    for record in updated_employee_data:
+        record_parts = record.split(',')
+        print(f"{record_parts[0]},{record_parts[1]},{float(record_parts[2]):.2f}")
+
+
+    search_id = input("\nEnter the employee id: ")
+    found_record = None
+
+    try:
+        with open(file_name, 'r') as file:
+            for line in file:
+                parts = line.strip().split(',')
+                if len(parts) == 3 and parts[0] == search_id:
+                    found_record = parts
+                    break
+    except Exception as e:
+        print(f"An error occurred while searching the file: {e}")
+        return
+
+    if found_record:
+        print(f"The employee {found_record[1]} with id {found_record[0]} has salary Rs.{float(found_record[2]):.2f}")
+    else:
+        print("No records found")
+
+try:
+    with open('employee.txt', 'x') as f:
+        f.write("101,Sam,55000.00\n")
+        f.write("102,Emily,62000.00\n")
+        f.write("103,Chris,48000.00\n")
+        f.write("104,Jessica,51000.00\n")
+        f.write("105,Michael,58000.00\n")
+        f.write("106,Emma,54000.00\n")
+        f.write("107,Ryan,53000.00\n")
+        f.write("108,Sarah,59000.00\n")
+        f.write("109,David,47000.00\n")
+        f.write("110,Laura,56000.00\n")
+except FileExistsError:
+    pass
+
+manage_employee_data()
