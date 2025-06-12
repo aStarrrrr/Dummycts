@@ -1,0 +1,18 @@
+def generate_pattern(input_pattern, length):
+    if length <= 0:
+        return "Invalid input. Please provide a positive row length"
+
+    generated_pattern = []
+    current_pattern_index = 0
+    input_len = len(input_pattern)
+
+    for _ in range(length):
+        row = []
+        for _ in range(length):
+            row.append(input_pattern[current_pattern_index % input_len])
+            current_pattern_index += 1
+        generated_pattern.append("".join(row))
+        current_pattern_index -= (length - 1)
+
+
+    return "\n".join(generated_pattern).strip()
