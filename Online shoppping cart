@@ -1,0 +1,79 @@
+def add_to_cart(cart, item, fixed_price, quantity):
+    if item not in cart:
+        cart[item] = {'price': fixed_price, 'quantity': quantity}
+        return "Item added to the cart"
+    else:
+        cart[item]['quantity'] += quantity
+        return f"Quantity updated for {item} in the cart"
+
+
+def view_cart(cart):
+    if not cart:
+        print("No items in the cart")
+    else:
+        print("Items in the Cart:")
+        for item, details in cart.items():
+            print(f"{item}: {details['quantity']} x Rs.{details['price']:.1f} each")
+
+
+def calculate_total(cart):
+    total_price = 0.0
+    for item, details in cart.items():
+        total_price += details['price'] * details['quantity']
+    return total_price
+
+
+def main():
+    fixed_prices = {
+        'Laptop': 48000.0,
+        'Mouse': 1000.0,
+        'Keyboard': 35000.0,
+        'Headphones': 2000.0,
+        'Printer': 15000.0
+    }
+    shopping_cart = {}
+
+    while True:
+        print("\nItems: Laptop, Mouse, Keyboard, Headphones, Printer")
+        print("1. Add item to cart")
+        print("2. View cart")
+        print("3. Calculate total")
+        print("4. Exit")
+
+        try:
+            choice = int(input("Enter your choice (1-4): "))
+        except ValueError:
+            print("Invalid choice")
+            continue
+
+        if choice == 1:
+            item_name = input("Enter the item name: ")
+            try:
+                quantity = int(input("Enter the quantity: "))
+                if quantity <= 0:
+                    print("Quantity must be a positive number.")
+                    continue
+            except ValueError:
+                print("Invalid quantity. Please enter an integer.")
+                continue
+
+            if item_name in fixed_prices:
+                price = fixed_prices[item_name]
+                message = add_to_cart(shopping_cart, item_name, price, quantity)
+                print(message)
+            else:
+                print("Invalid item name. Item not added to the cart")
+        elif choice == 2:
+            view_cart(shopping_cart)
+        elif choice == 3:
+            total = calculate_total(shopping_cart)
+            print(f"Total Price: Rs. {total:.1f}")
+        elif choice == 4:
+            print("Thank you!")
+            break
+        else:
+            print("Invalid choice")
+
+
+if __name__ == '__main__':
+    main()
