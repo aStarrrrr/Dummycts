@@ -1,0 +1,39 @@
+def main():
+    try:
+        num_employees = int(input("Enter no. of employees: "))
+    except ValueError:
+        print("Invalid input")
+        return
+
+    if num_employees <= 0:
+        print("Invalid input")
+        return
+
+    employee_sales_data = []
+    for _ in range(num_employees):
+        name = input("Enter name: ")
+        while True:
+            try:
+                sales = int(input("Enter no of products sold: "))
+                break
+            except ValueError:
+                print("Invalid input for products sold. Please enter an integer.")
+        city = input("Enter city: ")
+        employee_sales_data.append({'name': name, 'sales': sales, 'city': city})
+    grouped_sales_by_city = {}
+    for employee_data in employee_sales_data:
+        city = employee_data['city']
+        name = employee_data['name']
+        sales = employee_data['sales']
+
+        if city not in grouped_sales_by_city:
+            grouped_sales_by_city[city] = []
+        grouped_sales_by_city[city].append({'name': name, 'sales': sales})
+
+    print(grouped_sales_by_city)
+
+    return
+
+
+if __name__ == '__main__':
+    main()
