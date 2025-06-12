@@ -1,0 +1,15 @@
+# Import necessary module here
+import pattern
+
+
+def main():
+    input_text = input("Enter the input text: ")
+    length_of_row = int(input("Enter the length of each row: "))
+
+    generated_output = pattern.generate_pattern(input_text, length_of_row)
+    print(generated_output)
+
+    return
+
+if __name__ == '__main__':
+    main()
