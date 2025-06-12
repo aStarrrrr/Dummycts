@@ -1,0 +1,63 @@
+def manage_toy_inventory():
+    old_file_name = 'toys.txt'
+    new_file_name = 'new_toys.txt'
+    total_toys_count = 0
+
+    try:
+        with open(old_file_name, 'x') as f:
+            f.write("BarbiDoll-380\n")
+            f.write("RemoteCar-650\n")
+            f.write("Ball-1000\n")
+    except FileExistsError:
+        pass
+
+    try:
+        with open(old_file_name, 'r') as old_file:
+            with open(new_file_name, 'w') as new_file:
+                for line in old_file:
+                    new_file.write(line)
+                    total_toys_count += 1
+    except FileNotFoundError:
+        print(f"Error: The file '{old_file_name}' was not found. Please ensure it exists.")
+        return
+    except Exception as e:
+        print(f"An error occurred during file copy: {e}")
+        return
+
+    try:
+        num_new_toys = int(input("Enter the no. of new toys:"))
+        if num_new_toys < 0:
+            print("Number of new toys cannot be negative.")
+            return
+    except ValueError:
+        print("Invalid input. Please enter a number for new toys.")
+        return
+
+    print("Enter the toy's details:")
+    new_toy_details = []
+    for _ in range(num_new_toys):
+        toy_detail = input()
+        new_toy_details.append(toy_detail)
+
+    try:
+        with open(new_file_name, 'a') as new_file:
+            for detail in new_toy_details:
+                new_file.write(detail + '\n')
+                total_toys_count += 1
+    except Exception as e:
+        print(f"An error occurred while appending new toys: {e}")
+        return
+
+    print("\n")
+    try:
+        with open(new_file_name, 'r') as new_file:
+            for line in new_file:
+                print(line.strip())
+    except Exception as e:
+        print(f"An error occurred while displaying new file content: {e}")
+        return
+
+    print(f"No. of toys: {total_toys_count}.")
+
+
+manage_toy_inventory()
