@@ -1,0 +1,112 @@
+1.0 Schematic Diagram
+A schematic diagram provides a high-level, abstract representation of a system's components and their interactions. For the BookMart application, this diagram illustrates how users (both customers and administrators) interact with the system through a web interface, how the application server processes requests, and how data is persistently stored.
+
+The BookMart system operates on a client-server architecture, with a central database for data storage.
+
+Clients: These are the Web Browsers used by both Customers and Administrators. They are responsible for:
+
+Displaying the user interfaces (.cshtml views).
+
+Sending HTTP(S) requests (GET, POST, AJAX) to the ASP.NET Core Web Server.
+
+Receiving and rendering HTML/JSON responses.
+
+Web Server (ASP.NET Core Application): This is the core application logic running on Kestrel (the default ASP.NET Core web server), often situated behind a reverse proxy (like IIS for production deployment). It handles all incoming requests and comprises:
+
+Middleware Pipeline: Processes every request in a defined sequence, handling global concerns such as:
+
+HTTPS Redirection: Ensures all communication is secure.
+
+Static Files: Efficiently serves CSS, JavaScript, and images.
+
+Session Management: Maintains user-specific state (HttpContext.Session).
+
+Authentication: Identifies users (handled by AccountController logic) and establishes their identity (Customer or Admin).
+
+Authorization: Controls access to specific resources based on the user's role.
+
+Routing: Directs the request to the appropriate MVC Controller action.
+
+Controllers: These are the C# classes that contain the application's business logic. They act upon requests and prepare responses, interacting with the database via Entity Framework Core. Key controllers include:
+
+HomeController: Handles public-facing pages (e.g., the landing page displaying books and offers).
+
+AccountController: Manages user registration, login, and logout for both customers and administrators.
+
+UserController: Manages customer-specific functionalities (e.g., user profile, cart, orders).
+
+AdminController: Manages all administrative functionalities (dashboard, orders, books, stock, genres).
+
+Database (SQL Server): This is the relational database storing all persistent data for the BookMart application. It's interacted with via Entity Framework Core. Key tables include:
+
+Users (for authentication, roles, profile data)
+
+Books (product catalog)
+
+Genres (book categories)
+
+Carts
+
+CartItems
+
+Orders
+
+OrderItems
+
+StockTransactions (used by AdminController to log stock changes)
+
+High-Level Information Flows and Interactions:
+
+Public Access & Initial View:
+
+A Client requests the main page.
+
+The Web Server processes the request through its middleware.
+
+The HomeController retrieves active Books and Offers from the Database.
+
+The Web Server renders the public Index page and sends it back to the Client.
+
+User Authentication (Login/Registration):
+
+The Client submits login or registration data.
+
+The AccountController on the Web Server handles this.
+
+It queries/updates the Users table in the Database (verifying passwords with BCrypt.Net or creating new entries).
+
+Upon successful authentication, the Authentication Middleware establishes the user's identity (as either 'Customer' or 'Admin').
+
+The user is then redirected to User/UserHome (for customers) or Admin/Dashboard (for administrators).
+
+Customer Experience:
+
+An authenticated Customer Client sends requests for browsing, adding to cart, checkout, and profile management.
+
+The UserController (and related customer-facing controllers) on the Web Server processes these.
+
+These actions involve interactions with Books, Genres, Carts, CartItems, Orders, and OrderItems tables in the Database. All shipping and billing address information for an order is stored directly within the Orders table itself.
+
+The Web Server renders the appropriate customer-facing views.
+
+Admin Management:
+
+An authenticated Admin Client sends requests to manage the system.
+
+The AdminController on the Web Server handles these requests, often secured by Authorization Middleware.
+
+Administrative tasks involve extensive Database interactions across:
+
+Dashboard: Aggregating data from Orders, Books, Users.
+
+Order Management: Viewing, filtering, and updating order statuses in Orders and OrderItems.
+
+Book Management: Performing CRUD operations on Books and relating them to Genres.
+
+Stock Management: Updating StockQuantity in Books and logging transactions to StockTransactions.
+
+Genre Management: Performing CRUD on Genres.
+
+The Web Server delivers the administrative interfaces.
+
+This schematic provides a clear overview of the BookMart application's multi-tiered structure and the interaction paths between its components.
