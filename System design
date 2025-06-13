@@ -1,0 +1,67 @@
+User Module – Functional Flow
+	1.	Index Page
+	•	Login (existing user)
+	•	Register (new user → then login)
+	2.	User Home Page
+	•	Displays available books
+	•	Navbar Options:
+	•	🔍 Search Bar
+	•	🎯 Filter Option
+	•	🛒 Cart
+	•	📦 Order Section
+	•	👤 Profile Section
+	3.	Cart Section
+	•	View cart items
+	•	Adjust quantity
+	•	➡️ Proceed to Checkout Page
+	•	Enter Shipping Address
+	•	Choose Payment Method
+	•	Make Payment
+	•	✅ Order Placed & Confirmed
+	4.	Order Section
+	•	View all orders placed
+	•	Cancel Orders
+	•	Filter orders by:
+	•	Order status (e.g., Confirmed, Delivered, Cancelled)
+	•	Time period
+	5.	Profile Section
+	•	Edit profile details
+	•	View all past orders
+	•	Change password
+	•	Logout
+
+
+
+
+Admin Module – Functional Flow
+	1.	Login Page
+	•	Admin logs in using credentials
+	2.	Admin Dashboard
+	•	Overview:
+	•	📦 Total Orders
+	•	📚 Total Books in Stock
+	•	🧑‍ Users (Active Users Count)
+	•	💰 Total Revenue
+	•	Highlights:
+	•	🕒 Recent Orders
+	•	🔥 Top Selling Books
+	3.	Navigation Menu (Left/Top Panel)
+	•	Dashboard (default home)
+	•	Orders
+	•	View all orders
+	•	Change order status: Pending, Processing, Shipped, Delivered, Cancelled
+	•	View individual order details
+	•	Search & filter by date and status
+	•	Order status counts: pending, shipped, delivered, cancelled, etc.
+	•	Inventory
+	•	View stock overview:
+	•	Total book types
+	•	Low stock / Out of stock / In-stock
+	•	View stock per book
+	•	Categories
+	•	Add / Edit genres (categories)
+	•	Books
+	•	Add new books
+	•	Edit or Delete existing books
+	•	Logout
+	•	Option: 🔄 Switch to User
