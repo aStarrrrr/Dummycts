@@ -1,0 +1,167 @@
+3. Database Design
+3.1 Data Model
+This section provides a schematic view of the BookMart application's database design, outlining the key tables, their primary keys (PK), and foreign key (FK) relationships. This data model forms the backbone of the application, ensuring data integrity and efficient storage for all functionalities.
+
+Key Tables and Their Structure:
+
+Users Table
+
+UserID (PK)
+
+Username
+
+Email
+
+PasswordHash
+
+FirstName
+
+LastName
+
+Phone
+
+CreatedAt
+
+IsAdmin
+
+Description: Stores all customer and administrator account information, including authentication credentials and profile details.
+
+Books Table
+
+BookID (PK)
+
+Title
+
+Author
+
+Description
+
+Price
+
+DiscountedPrice
+
+CoverImageURL
+
+StockQuantity
+
+IsActive
+
+CreatedAt
+
+GenreID (FK to Genres.GenreID)
+
+Description: Contains comprehensive details for each book available in the store, including pricing, inventory, and categorization.
+
+Genres Table
+
+GenreID (PK)
+
+Name
+
+Description: Defines categories for books, allowing for organized browsing and filtering.
+
+Carts Table
+
+CartID (PK)
+
+UserID (FK to Users.UserID)
+
+CreatedAt
+
+UpdatedAt
+
+Description: Represents a user's shopping cart, tracking the creation and last modification times.
+
+CartItems Table
+
+CartItemID (PK)
+
+CartID (FK to Carts.CartID)
+
+BookID (FK to Books.BookID)
+
+Quantity
+
+Price
+
+Description: Stores the individual books added to a specific shopping cart, including the quantity and price at the time of addition.
+
+Orders Table
+
+OrderID (PK)
+
+UserID (FK to Users.UserID)
+
+OrderDate
+
+SubTotal
+
+ShippingCost
+
+TaxAmount
+
+TotalAmount
+
+PaymentMethod
+
+PaymentStatus
+
+OrderStatus
+
+ShippingFirstName
+
+ShippingLastName
+
+ShippingAddressLine1
+
+ShippingAddressLine2
+
+ShippingCity
+
+ShippingState
+
+ShippingPinCode
+
+ShippingPhone
+
+ShippingEmail
+
+Description: Records all details of a completed customer order, including financial summaries, status, and the complete shipping address directly within the order record.
+
+OrderItems Table
+
+OrderItemID (PK)
+
+OrderID (FK to Orders.OrderID)
+
+BookID (FK to Books.BookID)
+
+Quantity
+
+Price
+
+Description: Details the specific books that are part of an order, capturing the quantity and price for each item at the moment of purchase.
+
+StockTransactions Table
+
+StockTransactionID (PK) - Implicitly assumed, as AdminController creates entries for this.
+
+BookID (FK to Books.BookID)
+
+TransactionType
+
+Quantity
+
+PreviousQuantity
+
+NewQuantity
+
+Reason
+
+Notes
+
+TransactionDate
+
+UserID (FK to Users.UserID, nullable, for tracking who made the change)
+
+Description: Logs all changes to book stock quantities, providing an audit trail for inventory adjustments.
