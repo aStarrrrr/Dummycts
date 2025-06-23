@@ -1,0 +1,16 @@
+using System;
+using System.Linq;
+class Program
+{
+    static void Main()
+    {
+        string name = Console.ReadLine();
+        name = name.ToLower();
+        int count = 0;
+        foreach(char ch in name)
+        {
+            count++;
+        }
+        Console.WriteLine(count);
+    }
+}
