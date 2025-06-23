@@ -1,0 +1,22 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        int num = Convert.ToInt32(Console.ReadLine());
+        int original_num = num;
+        int sum = 0;
+        int size_of_num = num.ToString().Length;
+        while(num > 0){
+            int digit = num % 10;
+            sum += (int)Math.Pow(digit,size_of_num);
+            num /= 10;
+        }
+        if (sum == original_num)
+        {
+            Console.WriteLine("Armstrong");
+        }else{
+            Console.WriteLine("No armstrong");
+        }
+    }
+}
