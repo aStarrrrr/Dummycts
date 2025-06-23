@@ -1,0 +1,5 @@
+SELECT w.id AS wallet_id, SUM(t.amount) AS total_amount
+FROM wallets w
+JOIN transactions t ON w.transaction_id = t.id
+GROUP BY w.id
+HAVING COUNT(*) >= 2 AND SUM(t.amount) > 10;
