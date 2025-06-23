@@ -1,0 +1,17 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        int num = Convert.ToInt32(Console.ReadLine());
+        int a = 0;
+        int b = 1;
+        for(int i = 0; i < num; i++)
+        {
+            Console.WriteLine(a+" ");
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+    }
+}
